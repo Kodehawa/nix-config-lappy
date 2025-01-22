@@ -2,6 +2,7 @@
 
 {
   programs.neovim = {
+    enable = true;
     withNodeJs = true;
     withPython3 = true;
     extraLuaConfig = builtins.readFile ./init.lua;
@@ -16,10 +17,16 @@
 
       # Nix
       nixd
+      fish-lsp
+      deadnix
       nixfmt-rfc-style
 
       # Treesitter
       gcc # Needed for treesitter
+      # ^ treesitter
+
+      alejandra
+      statix
     ];
   };
 

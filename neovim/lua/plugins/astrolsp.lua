@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -44,6 +42,7 @@ return {
       -- "pyright"
       "lua_ls",
       "nixd",
+      "fish_lsp",
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
@@ -60,12 +59,12 @@ return {
                 expr = '(builtins.getFlake ("git+file:///home/kodehawa/.local/nix-flakes/system")).nixosConfigurations.Napoli.options',
               },
               home_manager = {
-                expr =
-                '(builtins.getFlake ("git+file:///home/kodehawa/.local/nix-flakes/system")).nixosConfigurations.Napoli.options.home-manager.users.type.getSubOptions []',
+                expr = '(builtins.getFlake ("git+file:///home/kodehawa/.local/nix-flakes/system")).nixosConfigurations.Napoli.options.home-manager.users.type.getSubOptions []',
               },
             },
           },
         },
+      },
     },
     -- customize how language servers are attached
     handlers = {

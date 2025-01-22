@@ -79,16 +79,6 @@
     # EDITOR = "emacs";
   };
 
-  # Enable Neovim with changes from wizardlink-neovim
-  programs.neovim = {
-    enable = true;
-    ollama.type = "";
-    nixd = {
-      hostname = "Napoli";
-      location = "git+file:///home/kodehawa/.local/nix-flakes/system";
-    };
-  };
-
   programs.mpv = {
     enable = true;
     config = {
