@@ -169,7 +169,21 @@
     })
   ];
 
+  # Force electron and chromium applications to run on wayland when Ozone is set.
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  # This kinda is just default settings but I wanna set them expliitly
+  fonts.fontconfig = {
+    allowBitmaps = false;
+    antialias = true;
+    subpixel = {
+      rgba = "rgb";
+      lcdfilter = "default";
+    };
+    hinting = {
+      style = "slight";
+    };
+  };
 
   fonts.packages = with pkgs; [
     (nerdfonts.override {
