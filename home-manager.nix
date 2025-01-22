@@ -1,13 +1,12 @@
 {
   config,
   pkgs,
-  wizardlink-neovim,
   ...
 }:
 
 {
   imports = [
-    wizardlink-neovim.homeManagerModules.neovim
+    ./neovim
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

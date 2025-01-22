@@ -7,7 +7,6 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    wizardlink-neovim.url = "github:wizardlink/linuxware";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
