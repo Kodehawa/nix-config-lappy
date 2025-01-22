@@ -154,6 +154,7 @@
     git
     ffmpeg
     powercap
+    gparted
     (discord.override {
       withOpenASAR = true;
     })
