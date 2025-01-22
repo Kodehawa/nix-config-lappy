@@ -172,6 +172,13 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   fonts.packages = with pkgs; [
+    (nerdfonts.override {
+      fonts = [
+        "FiraCode"
+        "Iosevka"
+        "FantasqueSansMono"
+      ];
+    })
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
