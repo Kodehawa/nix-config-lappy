@@ -144,7 +144,6 @@
     vscode
     gradience
     adw-gtk3
-    gnome-extension-manager
     htop
     cpu-x
     powertop
@@ -154,6 +153,9 @@
     ffmpeg
     powercap
     gparted
+    qogir-kde
+    qogir-theme
+    qogir-icon-theme
     (discord.override {
       withOpenASAR = true;
     })
@@ -186,14 +188,9 @@
   };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override {
-      fonts = [
-        "FiraCode"
-        "Iosevka"
-        "FantasqueSansMono"
-      ];
-    })
-    noto-fonts
+    nerd-fonts.iosevka
+    nerd-fonts.fira-code
+    nerd-fonts.fantasque-sans-mono
     noto-fonts-cjk-sans
     noto-fonts-emoji
     liberation_ttf
