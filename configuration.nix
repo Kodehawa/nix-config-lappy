@@ -1,5 +1,6 @@
 {
   config,
+  nix-gaming,
   pkgs,
   ...
 }:
@@ -16,6 +17,9 @@
   boot.initrd.kernelModules = [
     "i915"
   ];
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 30;
+  };
 
   # Enable experimental features
   nix.settings.experimental-features = [
@@ -136,11 +140,18 @@
     qogir-kde
     qogir-theme
     qogir-icon-theme
-    nvidia_oc
     cudaPackages.cudatoolkit
-    (discord.override {
-      withOpenASAR = true;
-    })
+    mangohud
+    nix-gaming.packages.${pkgs.system}.wine-tkg
+    nvidia_oc
+    jetbrains.gateway
+    discord
+    mission-center
+    telegram-desktop
+    kubectl
+    lens
+    dbeaver-bin
+    speedtest-cli
     (chromium.override {
       commandLineArgs = [
         "--enable-features=AcceleratedVideoEncoder,VaapiOnNvidiaGPUs,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE"
@@ -152,6 +163,9 @@
       enableWideVine = true;
     })
   ];
+
+  # Enable nix-ld so we can run stuff like jetbrains-gateway properly
+  programs.nix-ld.enable = true;
 
   # Force electron and chromium applications to run on wayland when Ozone is set.
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -170,7 +184,7 @@
   };
 
   fonts.packages = with pkgs; [
-    nerd-fonts.iosevka
+    nerd-fonts.iosevka-term
     nerd-fonts.fira-code
     nerd-fonts.fantasque-sans-mono
     noto-fonts-cjk-sans
