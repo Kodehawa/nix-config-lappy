@@ -152,6 +152,9 @@
     lens
     dbeaver-bin
     speedtest-cli
+    telepresence
+    vlc
+    anki
     (chromium.override {
       commandLineArgs = [
         "--enable-features=AcceleratedVideoEncoder,VaapiOnNvidiaGPUs,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE"
