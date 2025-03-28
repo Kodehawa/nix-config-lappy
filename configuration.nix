@@ -184,6 +184,8 @@
     labwc-menu-generator
   ];
 
+  powerManagement.powertop.enable = true;
+  #services.auto-cpufreq.enable = true;
   programs.labwc.enable = true;
   programs.waybar.enable = true;
 
