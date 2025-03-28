@@ -97,6 +97,9 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -104,20 +107,42 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    nomacs
+    grim
+    slurp
+    wl-clipboard
+    mako
+    wofi
+    swaybg
+    swayidle
+    swaylock
+    libsForQt5.qt5ct
+    qt6ct
+    sakura
+    slurp
+    wl-clipboard
+    swappy
+    wmenu
+    nwg-panel
+    nwg-look
+    nemo
+    kew
+    gopsuinfo
+    tdf
+    zathura
+    networkmanagerapplet
+    cmus
+    brightnessctl
+    sassc
     wget
-    gnome-tweaks
     pipx
     syncthing
     btop
     fastfetch
-    vesktop
     cider
     jetbrains.rider
     zulu
     prismlauncher
-    iosevka
-    ibm-plex
-    ptyxis
     winetricks
     libreoffice
     pfetch
@@ -126,10 +151,7 @@
     lm_sensors
     nix-index
     vscode
-    gradience
-    adw-gtk3
     htop
-    cpu-x
     powertop
     nvtopPackages.full
     zram-generator
@@ -137,6 +159,8 @@
     ffmpeg
     powercap
     gparted
+    kdePackages.qtstyleplugin-kvantum
+    libsForQt5.qtstyleplugin-kvantum
     qogir-kde
     qogir-theme
     qogir-icon-theme
@@ -146,32 +170,30 @@
     nvidia_oc
     jetbrains.gateway
     discord
-    mission-center
     telegram-desktop
     kubectl
     lens
     dbeaver-bin
     speedtest-cli
     telepresence
-    vlc
     anki
-    (chromium.override {
-      commandLineArgs = [
-        "--enable-features=AcceleratedVideoEncoder,VaapiOnNvidiaGPUs,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE"
-        "--enable-features=VaapiIgnoreDriverChecks,VaapiVideoDecoder,PlatformHEVCDecoderSupport"
-        "--enable-features=UseMultiPlaneFormatForHardwareVideo"
-        "--ignore-gpu-blocklist"
-        "--enable-zero-copy"
-      ];
-      enableWideVine = true;
-    })
+    bluez
+    bluez-tools
+    labwc-tweaks-gtk
+    labwc-gtktheme
+    labwc-menu-generator
   ];
+
+  programs.labwc.enable = true;
+  programs.waybar.enable = true;
 
   # Enable nix-ld so we can run stuff like jetbrains-gateway properly
   programs.nix-ld.enable = true;
 
   # Force electron and chromium applications to run on wayland when Ozone is set.
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  qt.platformTheme = "qt5ct";
 
   # This kinda is just default settings but I wanna set them expliitly
   fonts.fontconfig = {
@@ -189,11 +211,14 @@
   fonts.packages = with pkgs; [
     nerd-fonts.iosevka-term
     nerd-fonts.fira-code
+    nerd-fonts.victor-mono
     nerd-fonts.fantasque-sans-mono
+    nerd-fonts.mplus
     noto-fonts-cjk-sans
     noto-fonts-emoji
     liberation_ttf
     fira-code-symbols
+    ibm-plex
   ];
 
   hardware.graphics = {
@@ -242,6 +267,20 @@
     LIBVA_DRIVER_NAME = "iHD";
   };
 
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd labwc";
+        user = "greeter";
+      };
+    };
+  };
+
+  services.gnome.gnome-keyring.enable = true;
+  xdg.portal.enable = true;
+  xdg.portal.config.common.default = "*";
+
   services = {
     flatpak = {
       enable = true;
@@ -252,16 +291,6 @@
     xserver = {
       enable = true;
       videoDrivers = [ "nvidia" ];
-      displayManager = {
-        gdm = {
-          enable = true;
-        };
-      };
-      desktopManager = {
-        gnome = {
-          enable = true;
-        };
-      };
       xkb = {
         layout = "latam";
         variant = "";
@@ -304,6 +333,15 @@
       Type = "oneshot";
     };
   };
+
+  security.pam.loginLimits = [
+    {
+      domain = "@users";
+      item = "rtprio";
+      type = "-";
+      value = 1;
+    }
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
