@@ -118,17 +118,14 @@
     swaylock
     libsForQt5.qt5ct
     qt6ct
-    sakura
     slurp
     wl-clipboard
     swappy
     wmenu
     nwg-panel
     nwg-look
-    nemo
     kew
     gopsuinfo
-    tdf
     zathura
     networkmanagerapplet
     cmus
@@ -151,7 +148,6 @@
     lm_sensors
     nix-index
     vscode
-    htop
     powertop
     nvtopPackages.full
     zram-generator
@@ -182,14 +178,16 @@
     labwc-tweaks-gtk
     labwc-gtktheme
     labwc-menu-generator
+    qbittorrent
+    chromium
+    usbutils
+    ptyxis
   ];
 
   powerManagement.powertop.enable = true;
-  #services.auto-cpufreq.enable = true;
   programs.labwc.enable = true;
   programs.waybar.enable = true;
-
-  # Enable nix-ld so we can run stuff like jetbrains-gateway properly
+  programs.ssh.startAgent = true;
   programs.nix-ld.enable = true;
 
   # Force electron and chromium applications to run on wayland when Ozone is set.
@@ -269,6 +267,10 @@
     LIBVA_DRIVER_NAME = "iHD";
   };
 
+  services.gnome.gnome-keyring.enable = true;
+  xdg.portal.enable = true;
+  xdg.portal.config.common.default = "*";
+
   services.greetd = {
     enable = true;
     settings = {
@@ -278,10 +280,6 @@
       };
     };
   };
-
-  services.gnome.gnome-keyring.enable = true;
-  xdg.portal.enable = true;
-  xdg.portal.config.common.default = "*";
 
   services = {
     flatpak = {
@@ -296,6 +294,11 @@
       xkb = {
         layout = "latam";
         variant = "";
+      };
+      desktopManager = {
+        lxqt = {
+          enable = true;
+        };
       };
     };
     syncthing = {
