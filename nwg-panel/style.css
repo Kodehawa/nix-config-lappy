@@ -1,0 +1,121 @@
+/***** SUGGESTED TO CHANGE CAREFULLY *****/
+
+/* Recommended if panel "height" unset or smaller then your theme default button height */
+button {
+    margin: 2px
+}
+
+/* SwayTaskBar and SwayWorkspaces use custom widgets, that need this and the next name
+   to highlight currently focused task / workspace. */
+#task-box {
+    padding-left: 4px;
+    padding-right: 4px
+}
+
+#task-box-focused {
+    background-color: rgba (255, 255, 255, 0.12);
+    padding-left: 4px;
+    padding-right: 4px
+}
+
+
+/***** MODIFY TO YOUR TASTE *****/
+
+/* Sample button in sample config w/ no background nor border */
+#button-custom {
+    background: rgba (0, 0, 0, 0.0);
+    border: 0
+}
+
+/* Top panel in sample config uses this name */
+#panel-top {
+    font-family: IBM Plex Sans;
+    background: #272a33;
+    color: #d8dee8
+}
+
+#label-css {
+    font-weight: bold;
+}
+
+/* Bottom panel in sample config uses this name */
+#panel-bottom {
+    background: #101010;
+    color: #eeeeee
+}
+
+/* Controls window in sample config uses this name */
+#controls-window {
+    border-radius: 0px;
+    background: #272a33;
+    color: #d8dee8
+}
+#controls-window scale value {
+    color: #eeeeee
+}
+
+/* Brightness slider popup window in sample config uses this name */
+#brightness-popup {
+    border-radius: 15px;
+    background: #272a33;
+    color: #eeeeee
+}
+#brightness-popup box {
+    padding: 15px;
+}
+
+/* Executors usually behave better in monospace fonts */
+#executor-label {
+    font-family: IBM Plex Sans;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* and so does the Clock */
+#clock {
+    font-family: IBM Plex Sans;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Sample executor-weather uses "css-name": "weather" */
+#weather {
+    font-family: IBM Plex Sans;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* dwl-tags module */
+#dwl-tag-box {
+	padding-top: 4px;
+	padding-bottom: 4px
+}
+
+#dwl-tag-occupied {
+	font-family: monospace;
+	color: #eee;
+    background-color: #272a33;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#dwl-tag-free {
+	font-family: monospace;
+	color: #eee;
+    background-color: rgba (32, 50, 90, 1.0);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#dwl-tag-urgent {
+	font-family: monospace;
+	color: #eee;
+    background-color: #ee6600;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#dwl-tag-selected {
+	border: solid 2px;
+	border-color: #81a1c1
+}

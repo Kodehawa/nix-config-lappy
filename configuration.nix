@@ -182,6 +182,9 @@
     chromium
     usbutils
     ptyxis
+    p7zip
+    php
+    cider
   ];
 
   powerManagement.powertop.enable = true;

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+<menu id="root-menu" label="root-menu">
+  <menu id="Accessories" label="Accesorios" icon="applications-accessories">
+    <item label="Botellas" icon="com.usebottles.bottles">
+      <action name="Execute"><command>flatpak run --branch=stable --arch=x86_64 --command=bottles --file-forwarding com.usebottles.bottles @@u  @@</command></action>
+    </item>
+    <item label="Compresor de archivos de LXQt" icon="lxqt-archiver">
+      <action name="Execute"><command>lxqt-archiver</command></action>
+    </item>
+    <item label="Gestor de archivos PCManFM-Qt" icon="pcmanfm-qt">
+      <action name="Execute"><command>pcmanfm-qt</command></action>
+    </item>
+    <item label="Kvantum Manager" icon="kvantum">
+      <action name="Execute"><command>kvantummanager</command></action>
+    </item>
+    <item label="LibreOffice" icon="libreoffice-startcenter">
+      <action name="Execute"><command>libreoffice</command></action>
+    </item>
+    <item label="Neovim wrapper" icon="nvim">
+      <action name="Execute"><command>nvim</command></action>
+    </item>
+    <item label="nwg-processes" icon="nwg-processes">
+      <action name="Execute"><command>nwg-processes</command></action>
+    </item>
+    <item label="Visual Studio Code" icon="vscode">
+      <action name="Execute"><command>code</command></action>
+    </item>
+    <item label="Winetricks" icon="winetricks">
+      <action name="Execute"><command>winetricks --gui</command></action>
+    </item>
+  </menu> <!-- Accessories -->
+  <menu id="Settings" label="Configuración" icon="preferences-desktop">
+    <item label="Adaptadores Bluetooth" icon="blueman-device">
+      <action name="Execute"><command>blueman-adapters</command></action>
+    </item>
+    <item label="Administrar impresión" icon="cups">
+      <action name="Execute"><command>xdg-open http://localhost:631/</command></action>
+    </item>
+    <item label="Ajustes de Qt6" icon="preferences-desktop-theme">
+      <action name="Execute"><command>qt6ct</command></action>
+    </item>
+    <item label="Ajustes QT5" icon="preferences-desktop-theme">
+      <action name="Execute"><command>qt5ct</command></action>
+    </item>
+    <item label="Aplicaciones preferidas" icon="preferences-desktop">
+      <action name="Execute"><command>libfm-pref-apps</command></action>
+    </item>
+    <item label="Asociaciones de archivo" icon="preferences-desktop-filetype-association">
+      <action name="Execute"><command>lxqt-config-file-associations</command></action>
+    </item>
+    <item label="Aspecto" icon="preferences-desktop-theme">
+      <action name="Execute"><command>lxqt-config-appearance</command></action>
+    </item>
+    <item label="Atajos de teclado" icon="preferences-desktop-keyboard">
+      <action name="Execute"><command>lxqt-config-globalkeyshortcuts</command></action>
+    </item>
+    <item label="Bloquear la pantalla" icon="system-lock-screen">
+      <action name="Execute"><command>lxqt-leave --lockscreen</command></action>
+    </item>
+    <item label="Brillo" icon="brightnesssettings">
+      <action name="Execute"><command>lxqt-config-brightness</command></action>
+    </item>
+    <item label="Centro de configuración de LXQt" icon="preferences-system">
+      <action name="Execute"><command>lxqt-config</command></action>
+    </item>
+    <item label="Configuración de la sesión" icon="preferences-system-session-services">
+      <action name="Execute"><command>lxqt-config-session</command></action>
+    </item>
+    <item label="Configuración de Openbox" icon="obconf-qt">
+      <action name="Execute"><command>obconf-qt</command></action>
+    </item>
+    <item label="Configuración de red avanzada" icon="preferences-system-network">
+      <action name="Execute"><command>nm-connection-editor</command></action>
+    </item>
+    <item label="Configuración regional" icon="preferences-desktop-locale">
+      <action name="Execute"><command>lxqt-config-locale</command></action>
+    </item>
+    <item label="Control de volumen de PulseAudio" icon="multimedia-volume-control">
+      <action name="Execute"><command>pavucontrol-qt</command></action>
+    </item>
+    <item label="Escritorio" icon="user-desktop">
+      <action name="Execute"><command>pcmanfm-qt --desktop-pref=general</command></action>
+    </item>
+    <item label="Fecha y hora" icon="preferences-system-time">
+      <action name="Execute"><command>lxqt-admin-time</command></action>
+    </item>
+    <item label="Gestión de energía" icon="preferences-system-power-management">
+      <action name="Execute"><command>lxqt-config-powermanagement</command></action>
+    </item>
+    <item label="Gestor de conexiones Bluetooth" icon="blueman">
+      <action name="Execute"><command>blueman-manager</command></action>
+    </item>
+    <item label="GTK Settings" icon="nwg-look">
+      <action name="Execute"><command>nwg-look</command></action>
+    </item>
+    <item label="Kvantum Manager" icon="kvantum">
+      <action name="Execute"><command>kvantummanager</command></action>
+    </item>
+    <item label="Labwc Config" icon="labwc-tweaks-gtk">
+      <action name="Execute"><command>labwc-tweaks-gtk</command></action>
+    </item>
+    <item label="Monitor" icon="preferences-desktop-display">
+      <action name="Execute"><command>lxqt-config-monitor</command></action>
+    </item>
+    <item label="Notificaciones" icon="preferences-desktop-notification">
+      <action name="Execute"><command>lxqt-config-notificationd</command></action>
+    </item>
+    <item label="nwg-panel Settings" icon="nwg-panel">
+      <action name="Execute"><command>nwg-panel-config</command></action>
+    </item>
+    <item label="ROG Control Center" icon="rog-control-center">
+      <action name="Execute"><command>rog-control-center</command></action>
+    </item>
+    <item label="Teclado y ratón" icon="preferences-desktop-peripherals">
+      <action name="Execute"><command>lxqt-config-input</command></action>
+    </item>
+    <item label="Usuarios y grupos" icon="system-users">
+      <action name="Execute"><command>lxqt-admin-user</command></action>
+    </item>
+    <item label="Valores de configuración del servidor NVIDIA X" icon="nvidia-settings">
+      <action name="Execute"><command>nvidia-settings</command></action>
+    </item>
+    <item label="XScreenSaver" icon="xscreensaver">
+      <action name="Execute"><command>xscreensaver</command></action>
+    </item>
+    <item label="XScreenSaver Settings" icon="xscreensaver">
+      <action name="Execute"><command>xscreensaver-settings</command></action>
+    </item>
+  </menu> <!-- Settings -->
+  <menu id="Development" label="Desarrollo" icon="applications-development">
+    <item label="dbeaver-ce" icon="dbeaver">
+      <action name="Execute"><command>/nix/store/7jl8naih0s2sib7z3mksw0pim69xy132-dbeaver-bin-25.0.2/bin/dbeaver</command></action>
+    </item>
+    <item label="JetBrains Gateway">
+      <action name="Execute"><command>"/nix/store/q1m92xwfi4nqv2w5gb0bbqqiajijhh2k-gateway-2024.3.3/gateway/bin/gateway.sh"</command></action>
+    </item>
+    <item label="JetBrains Gateway" icon="gateway">
+      <action name="Execute"><command>gateway</command></action>
+    </item>
+    <item label="Rider" icon="rider">
+      <action name="Execute"><command>rider</command></action>
+    </item>
+    <item label="Visual Studio Code" icon="vscode">
+      <action name="Execute"><command>code</command></action>
+    </item>
+  </menu> <!-- Development -->
+  <menu id="Education" label="Educación" icon="applications-science">
+    <item label="Anki" icon="anki">
+      <action name="Execute"><command>anki</command></action>
+    </item>
+    <item label="LibreOffice Math" icon="libreoffice-math">
+      <action name="Execute"><command>libreoffice --math</command></action>
+    </item>
+  </menu> <!-- Education -->
+  <menu id="Graphics" label="Gráficos" icon="applications-graphics">
+    <item label="Botellas" icon="com.usebottles.bottles">
+      <action name="Execute"><command>flatpak run --branch=stable --arch=x86_64 --command=bottles --file-forwarding com.usebottles.bottles @@u  @@</command></action>
+    </item>
+    <item label="LibreOffice Draw" icon="libreoffice-draw">
+      <action name="Execute"><command>libreoffice --draw</command></action>
+    </item>
+    <item label="LXImage-Qt" icon="lximage-qt">
+      <action name="Execute"><command>lximage-qt</command></action>
+    </item>
+    <item label="nomacs" icon="org.nomacs.ImageLounge">
+      <action name="Execute"><command>nomacs</command></action>
+    </item>
+    <item label="ScreenGrab" icon="screengrab">
+      <action name="Execute"><command>screengrab</command></action>
+    </item>
+  </menu> <!-- Graphics -->
+  <menu id="Internet" label="Internet" icon="applications-internet">
+    <item label="Chromium" icon="chromium">
+      <action name="Execute"><command>chromium</command></action>
+    </item>
+    <item label="Configuración de red avanzada" icon="preferences-system-network">
+      <action name="Execute"><command>nm-connection-editor</command></action>
+    </item>
+    <item label="Discord" icon="discord">
+      <action name="Execute"><command>Discord</command></action>
+    </item>
+    <item label="Firefox" icon="firefox">
+      <action name="Execute"><command>firefox --name firefox</command></action>
+    </item>
+    <item label="Lens" icon="lens-desktop">
+      <action name="Execute"><command>lens-desktop --no-sandbox</command></action>
+    </item>
+    <item label="qBittorrent" icon="qbittorrent">
+      <action name="Execute"><command>qbittorrent</command></action>
+    </item>
+    <item label="Steam" icon="com.valvesoftware.Steam">
+      <action name="Execute"><command>flatpak run --branch=stable --arch=x86_64 --command=/app/bin/steam --file-forwarding com.valvesoftware.Steam @@u  @@</command></action>
+    </item>
+    <item label="Syncthing Web UI" icon="syncthing">
+      <action name="Execute"><command>syncthing --browser-only</command></action>
+    </item>
+    <item label="Telegram" icon="org.telegram.desktop">
+      <action name="Execute"><command>telegram-desktop --</command></action>
+    </item>
+  </menu> <!-- Internet -->
+  <menu id="Games" label="Juegos" icon="applications-games">
+    <item label="Botellas" icon="com.usebottles.bottles">
+      <action name="Execute"><command>flatpak run --branch=stable --arch=x86_64 --command=bottles --file-forwarding com.usebottles.bottles @@u  @@</command></action>
+    </item>
+    <item label="Prism Launcher" icon="org.prismlauncher.PrismLauncher">
+      <action name="Execute"><command>prismlauncher</command></action>
+    </item>
+    <item label="Steam" icon="com.valvesoftware.Steam">
+      <action name="Execute"><command>flatpak run --branch=stable --arch=x86_64 --command=/app/bin/steam --file-forwarding com.valvesoftware.Steam @@u  @@</command></action>
+    </item>
+  </menu> <!-- Games -->
+  <menu id="Multimedia" label="Multimedia" icon="applications-multimedia">
+    <item label="Cider" icon="cider">
+      <action name="Execute"><command>cider --no-sandbox</command></action>
+    </item>
+    <item label="Control de volumen de PulseAudio" icon="multimedia-volume-control">
+      <action name="Execute"><command>pavucontrol-qt</command></action>
+    </item>
+    <item label="mpv Media Player" icon="mpv">
+      <action name="Execute"><command>mpv --player-operation-mode=pseudo-gui --</command></action>
+    </item>
+  </menu> <!-- Multimedia -->
+  <menu id="Office" label="Oficina" icon="applications-office">
+    <item label="LibreOffice" icon="libreoffice-startcenter">
+      <action name="Execute"><command>libreoffice</command></action>
+    </item>
+    <item label="LibreOffice Base" icon="libreoffice-base">
+      <action name="Execute"><command>libreoffice --base</command></action>
+    </item>
+    <item label="LibreOffice Calc" icon="libreoffice-calc">
+      <action name="Execute"><command>libreoffice --calc</command></action>
+    </item>
+    <item label="LibreOffice Draw" icon="libreoffice-draw">
+      <action name="Execute"><command>libreoffice --draw</command></action>
+    </item>
+    <item label="LibreOffice Impress" icon="libreoffice-impress">
+      <action name="Execute"><command>libreoffice --impress</command></action>
+    </item>
+    <item label="LibreOffice Math" icon="libreoffice-math">
+      <action name="Execute"><command>libreoffice --math</command></action>
+    </item>
+    <item label="LibreOffice Writer" icon="libreoffice-writer">
+      <action name="Execute"><command>libreoffice --writer</command></action>
+    </item>
+    <item label="Zathura" icon="org.pwmt.zathura">
+      <action name="Execute"><command>zathura</command></action>
+    </item>
+  </menu> <!-- Office -->
+  <menu id="System" label="Sistema" icon="applications-system">
+    <item label="Acerca de LXQt" icon="lxqt-about">
+      <action name="Execute"><command>lxqt-about</command></action>
+    </item>
+    <item label="Administrar impresión" icon="cups">
+      <action name="Execute"><command>xdg-open http://localhost:631/</command></action>
+    </item>
+    <item label="Apagar" icon="system-shutdown">
+      <action name="Execute"><command>lxqt-leave --shutdown</command></action>
+    </item>
+    <item label="Bloquear la pantalla" icon="system-lock-screen">
+      <action name="Execute"><command>lxqt-leave --lockscreen</command></action>
+    </item>
+    <item label="Botellas" icon="com.usebottles.bottles">
+      <action name="Execute"><command>flatpak run --branch=stable --arch=x86_64 --command=bottles --file-forwarding com.usebottles.bottles @@u  @@</command></action>
+    </item>
+    <item label="btop++" icon="btop">
+      <action name="Execute"><command>btop</command></action>
+    </item>
+    <item label="Cerrar la sesión" icon="system-log-out">
+      <action name="Execute"><command>lxqt-leave --logout</command></action>
+    </item>
+    <item label="fish" icon="fish">
+      <action name="Execute"><command>fish</command></action>
+    </item>
+    <item label="GParted" icon="gparted">
+      <action name="Execute"><command>/nix/store/ngbi8s1rdwak3bxl1v0m5gxd5y244lb0-gparted-1.7.0/bin/gparted</command></action>
+    </item>
+    <item label="Hibernar" icon="system-suspend-hibernate">
+      <action name="Execute"><command>lxqt-leave --hibernate</command></action>
+    </item>
+    <item label="Labwc Config" icon="labwc-tweaks-gtk">
+      <action name="Execute"><command>labwc-tweaks-gtk</command></action>
+    </item>
+    <item label="Mission Center" icon="io.missioncenter.MissionCenter">
+      <action name="Execute"><command>flatpak run --branch=stable --arch=x86_64 --command=missioncenter io.missioncenter.MissionCenter</command></action>
+    </item>
+    <item label="NixOS Manual" icon="nix-snowflake">
+      <action name="Execute"><command>nixos-help</command></action>
+    </item>
+    <item label="nvtop" icon="nvtop">
+      <action name="Execute"><command>nvtop</command></action>
+    </item>
+    <item label="nwg-processes" icon="nwg-processes">
+      <action name="Execute"><command>nwg-processes</command></action>
+    </item>
+    <item label="Ptyxis" icon="org.gnome.Ptyxis">
+      <action name="Execute"><command>ptyxis</command></action>
+    </item>
+    <item label="qps" icon="qps">
+      <action name="Execute"><command>qps</command></action>
+    </item>
+    <item label="QTerminal" icon="utilities-terminal">
+      <action name="Execute"><command>qterminal</command></action>
+    </item>
+    <item label="QTerminal desplegable" icon="utilities-terminal">
+      <action name="Execute"><command>qterminal --drop</command></action>
+    </item>
+    <item label="Reiniciar" icon="system-reboot">
+      <action name="Execute"><command>lxqt-leave --reboot</command></action>
+    </item>
+    <item label="Salir" icon="system-shutdown">
+      <action name="Execute"><command>lxqt-leave</command></action>
+    </item>
+    <item label="Suspender" icon="system-suspend">
+      <action name="Execute"><command>lxqt-leave --suspend</command></action>
+    </item>
+    <item label="XScreenSaver Settings" icon="xscreensaver">
+      <action name="Execute"><command>xscreensaver-settings</command></action>
+    </item>
+    <item label="XTerm" icon="xterm-color_48x48">
+      <action name="Execute"><command>xterm</command></action>
+    </item>
+  </menu> <!-- System -->
+  <menu id="Other" label="Otras">
+    <item label="7-Zip File Manager" icon="2775_7zFM.0">
+      <action name="Execute"><command>env WINEPREFIX="/home/kodehawa/.wine" wine C:\\ProgramData\\Microsoft\\Windows\\Start\ Menu\\Programs\\7-Zip\\7-Zip\ File\ Manager.lnk</command></action>
+    </item>
+    <item label="7-Zip Help" icon="285E_7-zip.0">
+      <action name="Execute"><command>env WINEPREFIX="/home/kodehawa/.wine" wine C:\\ProgramData\\Microsoft\\Windows\\Start\ Menu\\Programs\\7-Zip\\7-Zip\ Help.lnk</command></action>
+    </item>
+    <item label="AIDA64" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.finalwire.aida64.png">
+      <action name="Execute"><command>waydroid app launch com.finalwire.aida64</command></action>
+    </item>
+    <item label="Android Keyboard (AOSP)" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.android.inputmethod.latin.png">
+      <action name="Execute"><command>waydroid app launch com.android.inputmethod.latin</command></action>
+    </item>
+    <item label="Browser" icon="/home/kodehawa/.local/share/waydroid/data/icons/org.lineageos.jelly.png">
+      <action name="Execute"><command>waydroid app launch org.lineageos.jelly</command></action>
+    </item>
+    <item label="Calculator" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.android.calculator2.png">
+      <action name="Execute"><command>waydroid app launch com.android.calculator2</command></action>
+    </item>
+    <item label="Calendar" icon="/home/kodehawa/.local/share/waydroid/data/icons/org.lineageos.etar.png">
+      <action name="Execute"><command>waydroid app launch org.lineageos.etar</command></action>
+    </item>
+    <item label="Camera" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.android.camera2.png">
+      <action name="Execute"><command>waydroid app launch com.android.camera2</command></action>
+    </item>
+    <item label="Clock" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.android.deskclock.png">
+      <action name="Execute"><command>waydroid app launch com.android.deskclock</command></action>
+    </item>
+    <item label="Contacts" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.android.contacts.png">
+      <action name="Execute"><command>waydroid app launch com.android.contacts</command></action>
+    </item>
+    <item label="CPU-Z" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.cpuid.cpu_z.png">
+      <action name="Execute"><command>waydroid app launch com.cpuid.cpu_z</command></action>
+    </item>
+    <item label="Files" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.android.documentsui.png">
+      <action name="Execute"><command>waydroid app launch com.android.documentsui</command></action>
+    </item>
+    <item label="Gallery" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.android.gallery3d.png">
+      <action name="Execute"><command>waydroid app launch com.android.gallery3d</command></action>
+    </item>
+    <item label="Google Play Store" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.android.vending.png">
+      <action name="Execute"><command>waydroid app launch com.android.vending</command></action>
+    </item>
+    <item label="Music" icon="/home/kodehawa/.local/share/waydroid/data/icons/org.lineageos.eleven.png">
+      <action name="Execute"><command>waydroid app launch org.lineageos.eleven</command></action>
+    </item>
+    <item label="Recorder" icon="/home/kodehawa/.local/share/waydroid/data/icons/org.lineageos.recorder.png">
+      <action name="Execute"><command>waydroid app launch org.lineageos.recorder</command></action>
+    </item>
+    <item label="Settings" icon="/home/kodehawa/.local/share/waydroid/data/icons/com.android.settings.png">
+      <action name="Execute"><command>waydroid app launch com.android.settings</command></action>
+    </item>
+    <item label="Uninstall" icon="D5CF_uninst.0">
+      <action name="Execute"><command>env WINEPREFIX="/home/kodehawa/.wine" wine C:\\users\\kodehawa\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\Dirac\ DirectShow\ Filters\\Uninstall.lnk</command></action>
+    </item>
+    <item label="Waydroid" icon="waydroid">
+      <action name="Execute"><command>waydroid show-full-ui</command></action>
+    </item>
+    <item label="Windows Media Player" icon="EF95_wmplayer.0">
+      <action name="Execute"><command>env WINEPREFIX="/home/kodehawa/.wine" wine C:\\users\\kodehawa\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\Windows\ Media\ Player.lnk</command></action>
+    </item>
+  </menu> <!-- Other -->
+</menu> <!-- root-menu -->
+</openbox_menu>
