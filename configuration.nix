@@ -13,7 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_12;
   boot.initrd.kernelModules = [
     "i915"
   ];
@@ -184,13 +184,13 @@
     ptyxis
     p7zip
     php
-    cider
+    notepadqq
+    easyeffects
   ];
 
   powerManagement.powertop.enable = true;
   programs.labwc.enable = true;
   programs.waybar.enable = true;
-  programs.ssh.startAgent = true;
   programs.nix-ld.enable = true;
 
   # Force electron and chromium applications to run on wayland when Ozone is set.
@@ -216,7 +216,7 @@
     nerd-fonts.fira-code
     nerd-fonts.victor-mono
     nerd-fonts.fantasque-sans-mono
-    nerd-fonts.mplus
+    nerd-fonts."m+"
     noto-fonts-cjk-sans
     noto-fonts-emoji
     liberation_ttf
