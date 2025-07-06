@@ -138,7 +138,9 @@
     fastfetch
     cider
     jetbrains.rider
+    jetbrains.idea-community-bin
     zulu
+    p7zip
     prismlauncher
     winetricks
     libreoffice
@@ -179,13 +181,13 @@
     labwc-gtktheme
     labwc-menu-generator
     qbittorrent
-    chromium
     usbutils
     ptyxis
-    p7zip
     php
     notepadqq
     easyeffects
+    wlr-randr
+    htop
   ];
 
   powerManagement.powertop.enable = true;
