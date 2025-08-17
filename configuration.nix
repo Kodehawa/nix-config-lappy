@@ -166,7 +166,6 @@
     mangohud
     nix-gaming.packages.${pkgs.system}.wine-tkg
     nvidia_oc
-    jetbrains.gateway
     discord
     telegram-desktop
     kubectl
@@ -188,6 +187,7 @@
     easyeffects
     wlr-randr
     htop
+    kitty
   ];
 
   powerManagement.powertop.enable = true;
@@ -214,6 +214,7 @@
   };
 
   fonts.packages = with pkgs; [
+    maple-mono.truetype
     nerd-fonts.iosevka-term
     nerd-fonts.fira-code
     nerd-fonts.victor-mono
@@ -352,6 +353,12 @@
       value = 1;
     }
   ];
+
+  nixpkgs.hostPlatform = {
+    gcc.arch = "skylake";
+    gcc.tune = "skylake";
+    system = "x86_64-linux";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
