@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 <labwc_config>
   <core>
-    <gap>10</gap>
     <decoration>server</decoration>
-    <windowSwitcher show="yes" preview="yes" raise="no" outlines="yes"/>
   </core>
+  <windowSwitcher show="yes" preview="no" raise="no" outlines="no"/>
   <placement>
     <policy>center</policy>
   </placement>
@@ -22,6 +21,12 @@
     </keybind>
     <keybind key="W-X">
       <action name="Execute" command="labwc -e"/>
+    </keybind>
+    <keybind key="W-E">
+      <action name="Execute" command="pcmanfm-qt"/>
+    </keybind>
+    <keybind key="W-F">
+      <action name="Execute" command="firefox"/>
     </keybind>
     <keybind key="XF86_MonBrightnessUp">
       <action name="Execute" command="brightnessctl s 10%+"/>
@@ -85,7 +90,7 @@
   <libinput>
     <device>
       <scrollFactor>1</scrollFactor>
-      <naturalScroll>no</naturalScroll>
+      <naturalScroll>yes</naturalScroll>
     </device>
   </libinput>
   <snapping>
@@ -98,7 +103,7 @@
     <notifyClient>always</notifyClient>
   </snapping>
   <theme>
-    <name>Arc-Clone</name>
+    <name>Qogir-Dark</name>
     <icon>Qogir-Dark</icon>
     <titlebar>
       <layout>iconify,max,close</layout>
@@ -108,32 +113,32 @@
     <keepBorder>yes</keepBorder>
     <dropShadows>yes</dropShadows>
     <font place="ActiveWindow">
-      <name>IBM Plex Sans</name>
-      <size>10</size>
+      <name>Commissioner</name>
+      <size>11</size>
       <slant>normal</slant>
       <weight>bold</weight>
     </font>
     <font place="InactiveWindow">
-      <name>IBM Plex Sans</name>
-      <size>10</size>
+      <name>Commissioner</name>
+      <size>11</size>
       <slant>normal</slant>
       <weight>bold</weight>
     </font>
     <font place="MenuHeader">
-      <name>IBM Plex Sans</name>
-      <size>10</size>
+      <name>Commissioner</name>
+      <size>11</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>
     <font place="MenuItem">
-      <name>IBM Plex Sans</name>
-      <size>10</size>
+      <name>Commissioner</name>
+      <size>11</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>
     <font place="OnScreenDisplay">
-      <name>IBM Plex Sans</name>
-      <size>10</size>
+      <name>Commissioner</name>
+      <size>11</size>
       <slant>normal</slant>
       <weight>normal</weight>
     </font>

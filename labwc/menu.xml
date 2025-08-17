@@ -20,6 +20,9 @@
     <item label="Neovim wrapper" icon="nvim">
       <action name="Execute"><command>nvim</command></action>
     </item>
+    <item label="Notepadqq" icon="notepadqq">
+      <action name="Execute"><command>notepadqq</command></action>
+    </item>
     <item label="nwg-processes" icon="nwg-processes">
       <action name="Execute"><command>nwg-processes</command></action>
     </item>
@@ -130,13 +133,16 @@
   </menu> <!-- Settings -->
   <menu id="Development" label="Desarrollo" icon="applications-development">
     <item label="dbeaver-ce" icon="dbeaver">
-      <action name="Execute"><command>/nix/store/7jl8naih0s2sib7z3mksw0pim69xy132-dbeaver-bin-25.0.2/bin/dbeaver</command></action>
+      <action name="Execute"><command>/nix/store/ancxvqf528z4rx8c2gjm98qanilkc3wz-dbeaver-bin-25.1.4/bin/dbeaver</command></action>
+    </item>
+    <item label="IntelliJ IDEA CE" icon="idea-community">
+      <action name="Execute"><command>idea-community</command></action>
     </item>
     <item label="JetBrains Gateway">
-      <action name="Execute"><command>"/nix/store/q1m92xwfi4nqv2w5gb0bbqqiajijhh2k-gateway-2024.3.3/gateway/bin/gateway.sh"</command></action>
+      <action name="Execute"><command>"/nix/store/yw827cf39iwpgq9k5jfilfgsrfnvric8-gateway-2025.1.1/gateway/bin/gateway.sh"</command></action>
     </item>
-    <item label="JetBrains Gateway" icon="gateway">
-      <action name="Execute"><command>gateway</command></action>
+    <item label="Notepadqq" icon="notepadqq">
+      <action name="Execute"><command>notepadqq</command></action>
     </item>
     <item label="Rider" icon="rider">
       <action name="Execute"><command>rider</command></action>
@@ -171,9 +177,6 @@
     </item>
   </menu> <!-- Graphics -->
   <menu id="Internet" label="Internet" icon="applications-internet">
-    <item label="Chromium" icon="chromium">
-      <action name="Execute"><command>chromium</command></action>
-    </item>
     <item label="Configuración de red avanzada" icon="preferences-system-network">
       <action name="Execute"><command>nm-connection-editor</command></action>
     </item>
@@ -196,7 +199,7 @@
       <action name="Execute"><command>syncthing --browser-only</command></action>
     </item>
     <item label="Telegram" icon="org.telegram.desktop">
-      <action name="Execute"><command>telegram-desktop --</command></action>
+      <action name="Execute"><command>Telegram --</command></action>
     </item>
   </menu> <!-- Internet -->
   <menu id="Games" label="Juegos" icon="applications-games">
@@ -216,6 +219,9 @@
     </item>
     <item label="Control de volumen de PulseAudio" icon="multimedia-volume-control">
       <action name="Execute"><command>pavucontrol-qt</command></action>
+    </item>
+    <item label="Easy Effects" icon="com.github.wwmm.easyeffects">
+      <action name="Execute"><command>easyeffects</command></action>
     </item>
     <item label="mpv Media Player" icon="mpv">
       <action name="Execute"><command>mpv --player-operation-mode=pseudo-gui --</command></action>
@@ -273,10 +279,16 @@
       <action name="Execute"><command>fish</command></action>
     </item>
     <item label="GParted" icon="gparted">
-      <action name="Execute"><command>/nix/store/ngbi8s1rdwak3bxl1v0m5gxd5y244lb0-gparted-1.7.0/bin/gparted</command></action>
+      <action name="Execute"><command>/nix/store/axpz7bwy6142f1r5xqwrnd23a7i44dhp-gparted-1.7.0/bin/gparted</command></action>
     </item>
     <item label="Hibernar" icon="system-suspend-hibernate">
       <action name="Execute"><command>lxqt-leave --hibernate</command></action>
+    </item>
+    <item label="Htop" icon="htop">
+      <action name="Execute"><command>htop</command></action>
+    </item>
+    <item label="kitty" icon="kitty">
+      <action name="Execute"><command>kitty</command></action>
     </item>
     <item label="Labwc Config" icon="labwc-tweaks-gtk">
       <action name="Execute"><command>labwc-tweaks-gtk</command></action>
@@ -321,7 +333,7 @@
       <action name="Execute"><command>xterm</command></action>
     </item>
   </menu> <!-- System -->
-  <menu id="Other" label="Otras">
+  <menu id="Other" label="Otras" icon="applications-other">
     <item label="7-Zip File Manager" icon="2775_7zFM.0">
       <action name="Execute"><command>env WINEPREFIX="/home/kodehawa/.wine" wine C:\\ProgramData\\Microsoft\\Windows\\Start\ Menu\\Programs\\7-Zip\\7-Zip\ File\ Manager.lnk</command></action>
     </item>
