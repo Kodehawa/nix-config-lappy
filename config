@@ -1,9 +1,0 @@
-font=IBM Plex Sans 10
-background-color=#31343d
-text-color=#ffffff
-outer-margin=5
-border-color=#2c2e3a
-max-icon-size=32
-default-timeout=6000
-group-by=app-name
-
