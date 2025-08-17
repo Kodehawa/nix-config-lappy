@@ -29,7 +29,7 @@ button {
 
 /* Top panel in sample config uses this name */
 #panel-top {
-    font-family: IBM Plex Sans;
+    font-family: Commissioner;
     background: #272a33;
     color: #d8dee8
 }
@@ -66,22 +66,22 @@ button {
 
 /* Executors usually behave better in monospace fonts */
 #executor-label {
-    font-family: IBM Plex Sans;
-    font-size: 13px;
+    font-family: Commissioner;
+    font-size: 15px;
     font-weight: bold;
 }
 
 /* and so does the Clock */
 #clock {
-    font-family: IBM Plex Sans;
-    font-size: 13px;
+    font-family: Commissioner;
+    font-size: 15px;
     font-weight: bold;
 }
 
 /* Sample executor-weather uses "css-name": "weather" */
 #weather {
-    font-family: IBM Plex Sans;
-    font-size: 13px;
+    font-family: Commissioner;
+    font-size: 15px;
     font-weight: bold;
 }
 

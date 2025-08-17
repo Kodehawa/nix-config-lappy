@@ -1,0 +1,11 @@
+swaybg -i /home/kodehawa/Imágenes/Wallpapers/todk1wyqfmoe1.jpeg --mode fill >/dev/null 2>&1 &
+swayidle -w \
+    timeout 300 'swaylock --image /home/kodehawa/Imágenes/Wallpapers/wallhaven-9djdkw.png --scaling fill --font "IBM Plex Sans"' \
+mako >/dev/null 2>&1 &
+nwg-panel >/dev/null 2>&1 &
+easyeffects --gapplication-service >/dev/null 2>&1 &
+sleep 5 && blueman-applet >/dev/null 2>&1 &
+sleep 2 && nm-applet --indicator >/dev/null 2>&1 &
+sleep 2 && lxqt-panel >/dev/null 2&1 &
+discord >/dev/null 2&1 &
+

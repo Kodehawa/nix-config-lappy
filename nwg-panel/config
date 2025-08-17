@@ -6,19 +6,17 @@
     "position": "top",
     "controls": "right",
     "width": "auto",
-    "height": 24,
+    "height": 33,
     "homogeneous": true,
     "margin-top": 0,
     "margin-bottom": 0,
-    "padding-horizontal": 5,
+    "padding-horizontal": 0,
     "padding-vertical": 0,
     "spacing": 10,
     "items-padding": 0,
     "icons": "light",
     "css-name": "panel-top",
-    "modules-left": [
-      "playerctl"
-    ],
+    "modules-left": [],
     "modules-center": [
       "clock"
     ],
@@ -125,7 +123,7 @@
     "playerctl": {
       "buttons-position": "left",
       "icon-size": 16,
-      "chars": 45,
+      "chars": 50,
       "scroll": true,
       "button-css-name": "",
       "label-css-name": "label-css",
@@ -143,7 +141,7 @@
       "icon-size": 16
     },
     "executor-weather": {
-      "script": "curl https://wttr.in/?format=1 -s",
+      "script": "curl https://wttr.in/ccp?format=1 -s",
       "interval": 1800,
       "css-name": "weather",
       "on-right-click": "",
@@ -153,7 +151,12 @@
       "on-left-click": "",
       "on-middle-click": "",
       "on-scroll-up": "",
-      "on-scroll-down": ""
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "icon-placement": "left",
+      "angle": 0.0,
+      "sigrt": 34,
+      "use-sigrt": false
     },
     "menu-start": "left",
     "exclusive-zone": true,
@@ -287,7 +290,7 @@
       "cmd-shutdown": "systemctl -i poweroff",
       "autohide": true,
       "file-manager": "pcmanfm-qt",
-      "icon-size-large": 24,
+      "icon-size-large": 32,
       "icon-size-small": 16,
       "icon-size-button": 16,
       "margin-bottom": 0,
@@ -298,7 +301,9 @@
       "terminal": "ptyxis",
       "run-through-compositor": true,
       "hover-opens-submenu": true,
-      "cmd-lock": "swaylock -f -c 000000"
-    }
+      "cmd-lock": "swaylock -f -c 000000",
+      "click-outside-closes": false
+    },
+    "pinned": {}
   }
 ]
